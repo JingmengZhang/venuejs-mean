@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<!-- To ensure proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>VenueJS Easy booking like there</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style/main.css">
+
+
+</head>
+<body ng-app="venueApp">
+<!-- navbar-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><span>Do Sports, easy booking than anywhere ! </span></li>
+          </ul>
+          <div class="nav navbar-nav navbar-right">
+
+            <li><a href="#">My Orderlist</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Center<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">My Orderlist</a></li>
+                <li><a href="#">My Vocheers</a></li>
+                <li><a href="#">Log Out</a></li>
+              </ul>
+            </li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Join Us</a></li>
+          </div>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<!-- header -->
+<div class="page-header">
+    <div class="container">
+    <div class="row">
+        <a href="index.html" target="_blank" class="logo col-sm-2" title="Do Sports"></a>
+        <div class="dropdown col-sm-2 padding-hdr">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+                <strong>Guangzhou</strong><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <a href="/index.html?city_id=76"><li> Guangzhou</li></a>
+                <a href="/index.html?city_id=77"><li> Shenzhen</li></a>
+                <a href="/index.html?city_id=52"><li> Beijing</li></a>
+                <a href="/index.html?city_id=321"><li> Shanghai</li></a>
+                <a href="/index.html?city_id=343"><li> Tianjin</li></a>
+                <a href="/index.html?city_id=322"><li> Chengdu</li></a>
+                <a href="/index.html?city_id=284"><li> Qingdao</li></a>
+                <a href="/index.html?city_id=144"><li> Langfang</li></a>
+                <a href="/index.html?city_id=97"><li> Nanning</li></a>
+                <a href="/index.html?city_id=80"><li> Foshan</li></a>
+                <a href="/index.html?city_id=79"><li> Dongguan</li></a>
+                <a href="/index.html?city_id=60"><li> Xiamen</li></a>
+                <a href="/index.html?city_id=383"><li> Hangzhou</li></a>
+            </ul>
+        </div>
+        <form class="col-sm-6 padding-hdr">
+                <select>
+                    <option value="1" selected>Badminton</option>
+                    <option value="6">Pingpong</option>
+                    <option value="11">Soccer</option>
+                    <option value="12">Tennis</option>
+                    <option value="13">Basketball</option>
+                </select>
+                <input type="text" onfocus="if(this.value == 'Please input a Venue name') {this.value = '';this.className += ' focus'}" onblur="if(this.value == '') {this.value = 'Please input a Venue name';this.className = this.className.replace(' focus','') }" value="Please input a Venue name" />
+                <input type="hidden" name="s_cat_id" id="section" value="1"/>
+                <input type="submit" class="ks-submit" value="Search" />
+        </form>
+    </div><!--row-->
+    <div class="row">
+        <ul class="nav nav-pills col-sm-9">
+            <li class="active"><a href="#/">Venue Booking</a></li>
+            <li><a href="#">APP Download</a></li>
+            <li><a href="#">Booking Process</a></li>
+        </ul>
+        <ul class="nav nav-pills navbar-right col-sm-3">
+            <li><a href="#/signin" class="glyphicon glyphicon-user"> Login</a></li><!-- change by Joe -->
+            <li><a ui-sref="authentication.signup"> Sign Up </a></li>
+        </ul>
+    </div>
+</div>
+<!-- /header -->
+<!-- /Content -->
+<div ng-view></div>
+<!-- /Content -->
+<!-- /footer -->
+<footer>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="dev-ft">
+                <a style="display: block;padding-top: 5px;" href="/static/about.html" target="_blank">About Us</a>
+                <a style="display: block;padding-top: 5px;" href="/static/joinus.html" target="_blank">Join Us</a>
+                <a style="display: block;padding-top: 5px;" href="/static/contact.html" target="_blank">Con</a>
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <div class="dev-ft">
+                <a style="display: block;padding-top: 5px;" href="/help/" target="_blank">Booking Process</a>
+                <a style="display: block;padding-top: 5px;" href="/active/tuan" target="_blank">Group Buying</a>
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <div class="dev-ft">
+                <a style="display: block;padding-top: 5px;" href="http://shangjia.7yundong.cn" target="_blank">Business Platform</a>
+                <a style="display: block; padding-top: 5px;" href="/static/down.html" target="_blank">Business Clients</a>
+                <a style="display: block; padding-top: 5px;" href="/d/c" target="_blank">Coach Download</a>
+            </div>
+        </div>
+
+
+        <div class="col-sm-3">
+                <div class="ewm fl" style="width: 100px;"><img width="95" src="/themes/default/static/images/ewm.png" /></div>
+                <div class="down-ft fl">
+                    <h4>VenueJS</h4>
+                    <dd>
+                        <p>QR DownLoad</p>
+                        <div class="app-wrap-ft">
+                            <a href="http://itunes.apple.com/cn/app/id717619906" target="_blank" class="app fl"><img width="50" src="/themes/default/static/images/ios.png" /></a>
+
+                            <i class="sep fl">&nbsp;</i>
+
+                            <a href="http://www.quyundong.com/d" target="_blank" class="app fl"><img width="50" src="/themes/default/static/images/and.png" /></a>
+
+                        </div>
+                    </dd>
+                </div>
+
+        </div>
+        <ul class="col-sm-2">
+            <li class="tel">4000-410-480</li>
+            <li class="time">Mon - Sat, 10:00-20:00 </li>
+            <li style="background: #f6f6f6;margin-top:0px;">Sun, 10:00-18:00</li>
+        </ul>
+    </div><!--row-->
+    <div class="tc" style="padding-top: 10px;">
+        <p style="color: #646464;"> © 2016 Copyright VenueJS <a href="/help-content.html?id=9" target="_blank">User Protocol</a>.</p>
+    </div>
+</div>
+</footer>
+<!-- /footer -->
+
+<!-- Modules -->
+<script src="js/app.js"></script>
+
+<!-- Controllers -->
+<script src="js/controllers/HomeController.js"></script>
+
+<!-- Services
+<script src="js/services/venues.js"></script>-->
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/* CSS Document */
+.navbar-nav > li > a {
+	padding-top:5px !important; 
+	padding-bottom:5px !important;
+}
+.navbar {
+	min-height:25px !important;
+}
+
+.tbtm{ 
+	height: 100px;
+	text-align:center;
+	vertical-align: bottom;
+}
+
+.logo {
+	left:10px;
+	display:inline-block;
+	background:url("../style/images/logo.png");
+	background-repeat:no-repeat;
+	width:140px;
+	height:70px;
+	cursor:pointer;
+}
+
+.padding-hdr {
+	padding-top: 30px !important;
+}
+
+.content {
+	max-width: 990px; 
+	min-width: 660px;
+	padding: 5px; 
+	margin:0 auto;
+	clear:both;
+} 
+.content-l {
+	padding: 5px; 
+	float:left;
+}
+.content-r {
+	padding: 5px; 
+	float:right;
+}
+.booking-div {
+	padding: 5px;
+}
+
+footer {
+	border: 1px;
+}
+.tc{ 
+	text-align:center;
+}
